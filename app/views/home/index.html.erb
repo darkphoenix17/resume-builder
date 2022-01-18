@@ -8,5 +8,7 @@
         <%= render 'shared/input/buttons/secondary', color: "purple", label: "Edit", href: edit_url %>
     </div>
     
-    <%= render 'shared/profile/preview', profile: @user.profile %>
+    <% if @user.profile != nil %>
+        <%= render 'shared/profile/preview', profile: @user.profile %>
+    <% end %>
 </main>
